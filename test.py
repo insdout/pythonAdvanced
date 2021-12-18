@@ -1,0 +1,12 @@
+emp, tax = input().split(), input().split()
+emp1 = sorted(emp)
+tax1 = sorted(tax, reverse=True)
+d = dict(zip(emp1, tax1))
+#print({ind: val for ind,val in enumerate(emp)})
+print("emp1: ", emp1)
+print('tax1: ', tax1)
+print('tax: ', tax)
+print("d", d)
+for i in emp:
+    print("i:", i, "d[i]:", d[i], "tax.index(d[i]):", tax.index(d[i]))
+list(filter(lambda i: print(tax.index(d[i]), end=' '), emp))
